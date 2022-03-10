@@ -1,0 +1,30 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form method = 'POST'>
+        {% csrf_token %}
+        {% comment %} {{form.as_p}} // for normal form{% endcomment %}
+        {% comment %} {{form | crispy}} // for crispy form {% endcomment %}
+        <div class="form-row">
+            <div class = 'forms-group-col-md-6 mb-0'>
+                {{form.address | as_crispy_field}}
+            </div>
+            <div class = 'forms-group-col-md-6 mb-0'>
+                {{form.city | as_crispy_field}}
+            </div>
+            <div class = 'forms-group-col-md-6 mb-0'>
+                {{form.state | as_crispy_field}}
+            </div>
+            <div class = 'forms-group-col-md-6 mb-0'>
+                {{form.zip_code | as_crispy_field}}
+            </div>
+            
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

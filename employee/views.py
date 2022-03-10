@@ -1,10 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
-
-# from e_gift_gallery import employee
-from e_gift_gallery import employee
 from .models import Employee
+# from e_gift_gallery import employee
+# from e_gift_gallery import employee
 
 
 def addEmployee(request):
